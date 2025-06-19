@@ -1,0 +1,65 @@
+# Build files
+/build/
+*/build/
+
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+*.iws
+
+# macOS specific
+.DS_Store
+
+# Kotlin/Java related
+*.class
+*.jar
+*.war
+*.ear
+*.kotlin_metadata
+*.kotlin_module
+
+# Gradle
+.gradle
+.gradle-cache/
+build/
+gradle-app.setting
+
+# Log files
+*.log
+*.out
+
+# Local environment files
+local.properties
+.env
+.env.*
+
+# Test results
+*.apk
+*.ap_
+*.dex
+*.keystore
+/outputs/
+
+# Cache and temporary files
+*.swp
+*.tmp
+*.bak
+*.orig
+*.idea/*
+*~.nib
+\#*\#
+!.idea/codeStyles
+
+# Package Files #
+*.zip
+*.tar.gz
+*.rar
+*.klib
+*.salive
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*

@@ -1,0 +1,15 @@
+CREATE TABLE story (
+  headline TEXT NOT NULL,
+  imageUrl TEXT NOT NULL,
+  published INTEGER NOT NULL
+);
+
+selectAll:
+SELECT * FROM story;
+
+deleteAll:
+DELETE FROM story;
+
+insertStory:
+INSERT INTO story(headline, imageUrl, published)
+VALUES (?, ?, ?);

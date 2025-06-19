@@ -1,46 +1,73 @@
-# Assignment - CBC Senior Mobile Developer
-This is a take-home assignment which will help us get a better understanding of how you approach a cross-platform development task. 
-We will look at your architectural decisions, algorithmic design, coding style and overall problem solving skills.
+# 📰 KMP Assessment — Android Version
 
-## Project
-A private GitHub repository has been created for you with the shell of a KMP project already set up. We would like you to complete the 
-implementation of a KMP module that provides the business logic to fetch content information from the supplied endpoint. You will need 
-to complete the implementation of both an Android and iOS app that use this module as well. The base structure needed to complete all 
-3 pieces is present in the repository.
+This repository contains the Android implementation for the KMP Assessment project. The app is a clean and functional **Kotlin Multiplatform (KMP)** news reader that fetches stories from an API, caches them locally, and provides a seamless offline experience — all built using **Jetpack Compose**, **Ktor**, and **SQLDelight**.
 
-### Part One: The Compose Multiplatform (CMP) module
-The repository has the base structure for a module named "shared". This module will be responsible for fetching news story data from 
-the given endpoint. This module must be usable by both iOS and Android native mobile applications. Each item listed is required for the 
-assessment to be considered complete.
-- Story data is read from this endpoint: https://cbcmusic.github.io/assessment-tmp/data/data.json.
-- Potential networking issues must be handled and managed.
-- Data is managed with an appropriate and efficient model.
-- The user is able to filter the story items based on headline text.
-- The data loaded persists if the app goes offline.
-- Include a minimum of 3 unit tests.
+---
 
-### Part Two: The Native Apps
-The repository already has the base structure set up for a native Android and iOS application. Complete the implementation of each of these 
-so that it makes use of the module you have created in Part One. You can style the UI as you like. Each item listed is required for the 
-assessment to be considered complete:
+## 🚀 Project Overview
 
-- The story information is fetched via the module created in Part One and displayed in a list.
-- Each story item has an image, headline and published date.
-- The apps include UI that enables the user to filter the stories as allowed by the module created in Part One.
-- If the app goes offline, the story data previously loaded by the module created in Part One is displayed to the user.
+- **Platform**: Android (KMP-ready shared module)
+- **Purpose**: Demonstrates a multiplatform architecture with Android-specific UI
+- **Focus Areas**: Offline support, modern UI patterns, clean architecture, reactive state management
 
-### Part Three: The Documentation
+---
 
-Create documentation that could be used to onboard a developer who is new to your project. There is currently a README.md document containing 
-the assessment outline that you are welcome to overwrite. You have been sent a PDF version of the assessment requirements as well so 
-you should still have that information. For your README, highlight the architectural choices you made and why, any other important 
-technical insights and any instructions needed to build your project. 
+## ✅ Features Implemented
 
-## Important Rules:
-- *You and you alone should complete your submission.*
-- *Refrain from using any official CBC branding in your application.*
-- *Do not share your work with anyone outside of CBC.*
+- ✅ **KMP Architecture**: Android app with shared logic in a KMP module
+- ✅ **Pull-to-Refresh**: `SwipeRefresh` with Jetpack Compose
+- ✅ **Offline Caching**: Local data persistence via SQLDelight
+- ✅ **Dark Mode**: Full support for system UI theme
+- ✅ **Banner when offload**: Notifies when the application is offline
+- ✅ **Search Highlighting**: Emphasizes matching terms in headlines
+- ✅ **Robust MVVM**: Clean separation of concerns with ViewModel + Repository
 
-## Submission
-If you have any questions or concerns about the requirements, rules or submission, please reach out to our Talent Acquisition Specialist ***Marium Qadir***
-(marium.qadir@cbc.ca) and the hiring Senior Engineering Manager ***Kristen Elliott*** (kristen.elliott@cbc.ca).
+---
+
+## 🧱 Tech Stack
+
+| Layer           | Technology                      |
+|-----------------|---------------------------------|
+| UI              | Jetpack Compose                 |
+| State Mgmt      | Kotlin Flow + ViewModel         |
+| Network         | Ktor                            |
+| Caching         | SQLDelight                      |
+| KMP Sharing     | Kotlin Multiplatform (KMP)      |
+| Design          | Material You (Compose)          |
+| UX Enhancers    | Accompanist (for shimmer, swipe)|
+
+---
+
+## 🛠️ How to Build & Run (Android)
+
+1.  **Clone the repository**:
+    ```bash
+    git clone [https://github.com/Enosh185/KMPAssessment-Android.git](https://github.com/Enosh185/KMPAssessment-Android.git)
+    ```
+2.  Open the project in Android Studio Hedgehog or later.
+3.  Select the `androidApp` module and run it on an emulator or device.
+4.  **Ensure your system has JDK 17 installed**.
+
+### 🧪 iOS Integration (Not Included in Submission)
+
+While the shared module (`:shared`) is set up for iOS (targets: `iosX64`, `iosArm64`, `iosSimulatorArm64`), the XCFramework generation and CocoaPods setup are not completed in this version. This submission focuses solely on a fully functional Android app.
+
+### ⚙️ Offline Mode Behavior
+
+* Stories are cached automatically when fetched.
+* If the network is unavailable, the app displays stories from local storage.
+
+### 📁 Project Structure
+KMPAssessment/
+├── androidApp/          # Android-specific code & UI
+├── shared/              # Shared KMP module (network, cache, business logic)
+└── iosApp/              # iOS (scaffold only, not part of submission)
+
+
+---
+
+## 👤 Author
+
+**Enosh Mosuganti**
+Mobile Developer
+📧 enosh185@gmail.com
